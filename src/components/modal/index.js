@@ -1,2 +1,2 @@
-export * from "./modal-content";
-export * from "./modal-view";
+export * from "./modalContent";
+export * from "./modalView";
