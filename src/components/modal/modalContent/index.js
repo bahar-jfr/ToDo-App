@@ -14,8 +14,7 @@ export function ModalContent() {
       }),
       El({
         element: "div",
-        className:
-          "flex justify-around gap-4 md:gap-8 items-center w-full ",
+        className: "flex justify-around gap-4 md:gap-8 items-center w-full ",
         children: [
           El({
             element: "div",
@@ -108,7 +107,7 @@ export function ModalContent() {
           }),
         ],
       }),
-      btnMaker("Submit","submit_btn")
+      btnMaker("Submit", "submit_btn"),
     ],
   });
 }
