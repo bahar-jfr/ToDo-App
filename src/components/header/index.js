@@ -1,7 +1,8 @@
 import { El, icon } from "../../library";
+import { showModal } from "../../library/functions/showModal";
 
 export function Header() {
-  const header =  El({
+  const header = El({
     element: "header",
     className: "bg-dark_purple w-full flex gap-3 items-center p-6 text-white",
     children: [
@@ -24,11 +25,11 @@ export function Header() {
           }),
         ],
       }),
-      icon("fa-solid fa-filter fa-xl mx-3"),
-      icon("fa-solid fa-square-plus fa-xl"),
+      icon("fa-solid fa-filter fa-xl mx-3 cursor-pointer"),
+      icon("fa-solid fa-square-plus fa-xl cursor-pointer"),
     ],
   });
-  header.children[4].addEventListener("click",()=> showModal())
+  header.children[4].addEventListener("click", () => showModal());
 
-  return header
+  return header;
 }
