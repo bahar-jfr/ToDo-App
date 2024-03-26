@@ -3,7 +3,7 @@ import { El, btnMaker } from "../../../library";
 export function ModalContent() {
   return El({
     element: "div",
-    className: "flex flex-col gap-6 items-center px-4",
+    className: "flex flex-col gap-8 items-center px-4",
     children: [
       El({
         element: "input",
@@ -104,6 +104,25 @@ export function ModalContent() {
                 type: "date",
               }),
             ],
+          }),
+        ],
+      }),
+      El({
+        element: "div",
+        className: "relative",
+        children: [
+          El({
+            element: "label",
+            className: "absolute -top-2.5 left-3 z-10 text-xs text-dark_purple",
+            children: "Description",
+          }),
+          El({
+            element: "textarea",
+            id: "task_description",
+            rows: 2,
+            cols: 30,
+            className:
+              "p-2 w-full rounded-md outline-none cursor-pointer text-dark_purple",
           }),
         ],
       }),
