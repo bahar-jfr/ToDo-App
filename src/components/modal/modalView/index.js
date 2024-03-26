@@ -7,7 +7,7 @@ export function Modal() {
     element: "div",
     id: "modal",
     className:
-      " transition duration-500  w-80 md:w-2/6 h-80 md:h-3/6 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden",
+      " transition duration-500  w-80 md:w-2/6 h-80 md:h-3/6 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden bg-purple-100",
     children: [
       El({
         element: "h2",
