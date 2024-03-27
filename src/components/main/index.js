@@ -1,4 +1,5 @@
 import { El } from "../../library";
+import { Footer } from "../footer";
 
 export function Main() {
   return El({
@@ -43,10 +44,10 @@ export function Main() {
       }),
       El({
         element: "tbody",
-        className: '',
-        children:[],
-        id: "tableBody"
-      })
+        className: "",
+        children: [],
+        id: "tableBody",
+      }),
     ],
   });
 }
