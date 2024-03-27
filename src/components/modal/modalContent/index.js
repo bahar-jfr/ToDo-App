@@ -131,6 +131,6 @@ export function ModalContent() {
     ],
   });
   form.querySelector("#submit").addEventListener("click", closeModal);
-  form.addEventListener("submit",handelSubmit)
+  // form.addEventListener("submit",handelSubmit)
   return form;
 }
