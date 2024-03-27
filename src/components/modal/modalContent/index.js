@@ -1,13 +1,14 @@
 import { El, btnMaker } from "../../../library";
+import { closeModal } from "../../../library/functions/closeModal";
 
 export function ModalContent() {
-  return El({
-    element: "div",
+  const form = El({
+    element: "form",
     className: "flex flex-col gap-8 items-center px-4",
     children: [
       El({
         element: "input",
-        id: "task_name",
+        id: "taskName",
         className:
           "p-4 w-full rounded-md outline-none placeholder:text-purple-300",
         placeholder: "task name",
@@ -28,7 +29,7 @@ export function ModalContent() {
               }),
               El({
                 element: "select",
-                id: "task_priority",
+                id: "priority",
                 className:
                   "p-2 w-full rounded-md outline-none cursor-pointer text-dark_purple relative",
                 children: [
@@ -63,7 +64,7 @@ export function ModalContent() {
               }),
               El({
                 element: "select",
-                id: "task_status",
+                id: "status",
                 className:
                   "p-2 w-full rounded-md outline-none cursor-pointer text-dark_purple relative",
                 children: [
@@ -98,7 +99,7 @@ export function ModalContent() {
               }),
               El({
                 element: "input",
-                id: "task_date",
+                id: "date",
                 className:
                   "p-2 w-full rounded-md outline-none cursor-pointer text-dark_purple relative",
                 type: "date",
@@ -118,7 +119,7 @@ export function ModalContent() {
           }),
           El({
             element: "textarea",
-            id: "task_description",
+            id: "description",
             rows: 2,
             cols: 30,
             className:
@@ -126,7 +127,10 @@ export function ModalContent() {
           }),
         ],
       }),
-      btnMaker("Submit", "submit_btn"),
+      btnMaker("Submit", "submit", "submit"),
     ],
   });
+  form.querySelector("#submit").addEventListener("click", closeModal);
+  form.addEventListener("submit",handelSubmit)
+  return form;
 }
