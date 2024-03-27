@@ -1,5 +1,6 @@
 import { El, btnMaker } from "../../../library";
 import { closeModal } from "../../../library/functions/closeModal";
+import { handelSubmit } from "../../../library/functions/handelSubmit";
 
 export function ModalContent() {
   const form = El({
@@ -131,6 +132,6 @@ export function ModalContent() {
     ],
   });
   form.querySelector("#submit").addEventListener("click", closeModal);
-  // form.addEventListener("submit",handelSubmit)
+  form.addEventListener("submit",handelSubmit)
   return form;
 }
