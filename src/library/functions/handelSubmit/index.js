@@ -1,3 +1,5 @@
+import { setItems } from "../setItems";
+
 const isEdit = false;
 
 export function handelSubmit(e) {
@@ -19,6 +21,6 @@ export function handelSubmit(e) {
       desc,
       id: Date.now(),
     };
-    console.log(task);
+    setItems(task);
   }
 }
