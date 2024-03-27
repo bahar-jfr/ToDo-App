@@ -1,9 +1,14 @@
-import axios from 'axios';
+import axios from "axios";
 
-// const BASE_URL = 'http://localhost:3000/product/';
+export function setData(data) {
+  const jsonServerURL = "http://localhost:3000/task";
 
-export async function getProduct(endpoint) {
-  const { data } = await axios.post(`http://localhost:3000/task/${endpoint}`);
-  return data;
+  axios
+    .post(jsonServerURL, data)
+    .then((response) => {
+      console.log("Data posted successfully: ", response.data);
+    })
+    .catch((error) => {
+      console.error("Error posting data: ", error);
+    });
 }
-axios.post

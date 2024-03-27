@@ -1,5 +1,5 @@
 import { closeModal } from "../closeModal";
-import { setItems } from "../setItems";
+import { setData } from "../../../api/setData";
 
 const isEdit = false;
 
@@ -21,6 +21,6 @@ export function handelSubmit() {
       desc,
       id: Date.now(),
     };
-    setItems(task);
+    setData(task);
   }
 }
