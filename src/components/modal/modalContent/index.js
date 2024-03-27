@@ -1,6 +1,7 @@
 import { El, btnMaker } from "../../../library";
 import { closeModal } from "../../../library/functions/closeModal";
 import { handelSubmit } from "../../../library/functions/handelSubmit";
+import { validate } from "../../../library/functions/validate";
 
 export function ModalContent() {
   const form = El({
@@ -8,12 +9,25 @@ export function ModalContent() {
     className: "flex flex-col gap-8 items-center px-4",
     children: [
       El({
-        element: "input",
-        id: "taskName",
-        className:
-          "p-4 w-full rounded-md outline-none placeholder:text-purple-300",
-        placeholder: "task name",
+        element: "div",
+        className: "w-full",
+        children: [
+          El({
+            element: "input",
+            id: "taskName",
+            className:
+              "p-4 w-full rounded-md outline-none placeholder:text-purple-300",
+            placeholder: "task name",
+          }),
+          El({
+            element: "div",
+            id: "invalidTask",
+            className: "hidden  m-0 pl-2 text-red-400",
+            children: "This field is required!",
+          }),
+        ],
       }),
+
       El({
         element: "div",
         className: "flex justify-around gap-4 md:gap-8 items-center w-full ",
@@ -90,7 +104,7 @@ export function ModalContent() {
           }),
           El({
             element: "div",
-            className: "relative w-full",
+            className: "relative w-full flex flex-col ",
             children: [
               El({
                 element: "span",
@@ -99,11 +113,23 @@ export function ModalContent() {
                 children: " Date ",
               }),
               El({
-                element: "input",
-                id: "date",
-                className:
-                  "p-2 w-full rounded-md outline-none cursor-pointer text-dark_purple relative",
-                type: "date",
+                element: "div",
+                className: " h-10",
+                children: [
+                  El({
+                    element: "input",
+                    id: "date",
+                    className:
+                      "p-2 w-full rounded-md outline-none cursor-pointer text-dark_purple relative",
+                    type: "date",
+                  }),
+                  El({
+                    element: "div",
+                    id: "invalidDate",
+                    className: "hidden  pl-2 text-red-400 text-sm",
+                    children: "required!",
+                  }),
+                ],
               }),
             ],
           }),
@@ -131,7 +157,8 @@ export function ModalContent() {
       btnMaker("Submit", "submit", "submit"),
     ],
   });
-  form.querySelector("#submit").addEventListener("click", closeModal);
-  form.addEventListener("submit",handelSubmit)
+
+  form.addEventListener("submit", validate);
+
   return form;
 }

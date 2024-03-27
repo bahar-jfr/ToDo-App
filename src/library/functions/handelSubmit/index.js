@@ -1,10 +1,10 @@
+import { closeModal } from "../closeModal";
 import { setItems } from "../setItems";
 
 const isEdit = false;
 
-export function handelSubmit(e) {
-  e.preventDefault();
-
+export function handelSubmit() {
+  closeModal();
   const form = document.querySelector("form");
   const taskName = form.taskName.value;
   const priority = form.priority.value;
