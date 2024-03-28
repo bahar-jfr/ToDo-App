@@ -1,7 +1,9 @@
 import { El } from "../../library";
+import { handelPage } from "../../library/functions/handelPage";
+import { pagination } from "../../library/functions/pagination";
 
 export function Footer() {
-  return El({
+  const footer = El({
     element: "div",
     className: "w-full p-4 flex justify-end items-center",
     children: [
@@ -16,6 +18,7 @@ export function Footer() {
           }),
           El({
             element: "select",
+            id: "selectPage",
             className: "outline-0",
             children: [
               El({
@@ -73,4 +76,7 @@ export function Footer() {
       }),
     ],
   });
+  footer.querySelector("#selectPage").addEventListener("change", handelPage);
+  footer.querySelector("#pagination").addEventListener("click", pagination);
+  return footer;
 }
