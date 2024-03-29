@@ -1,4 +1,5 @@
 import { El } from "../../../library";
+import { closeFilter } from "../../../library/functions/closeFilter";
 import { closeModal } from "../../../library/functions/closeModal";
 import { ModalContent } from "../modalContent";
 
@@ -27,6 +28,6 @@ export function Overlay() {
     className:
       "overlay fixed top-0 bg-black_overlay w-full h-full backdrop-blur-sm blur-sm bg-opacity-20 z-0 hidden ",
   });
-  Overlay.addEventListener("click", () => closeModal());
+  Overlay.addEventListener("click", () =>{ closeModal(), closeFilter()});
   return Overlay;
 }

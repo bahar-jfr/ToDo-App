@@ -1,4 +1,5 @@
 import { El, icon } from "../../library";
+import { showFilter } from "../../library/functions/showFilter";
 import { showModal } from "../../library/functions/showModal";
 
 export function Header() {
@@ -30,6 +31,7 @@ export function Header() {
     ],
   });
   header.children[4].addEventListener("click", () => showModal());
+  header.children[3].addEventListener("click",()=> showFilter())
 
   return header;
 }
