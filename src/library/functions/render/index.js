@@ -1,5 +1,6 @@
 import { El } from "../../helpers";
 import { actionBtn } from "../../helpers/actions";
+import { statusBtn } from "../../helpers/status";
 
 export function render(tasks) {
   const tableBody = document.getElementById("tableBody");
@@ -15,19 +16,12 @@ export function render(tasks) {
       children: [
         El({
           element: "td",
-          className :" py-3 w-1/5 text-center",
+          className: " py-3 w-1/5 text-center",
           children: item.taskName,
         }),
-        El({
-            element :"td",
-            className: " border-x-2  py-3 w-1/5 text-center",
-            children:["hhh"]
-        }),
-        El({
-            element :"td",
-            className: " border-x-2  py-3 w-1/5 text-center",
-            children:["jhh"]
-        }),
+        statusBtn(item.priority),
+        statusBtn(item.status),
+
         El({
           element: "td",
           className: " border-x-2  py-3 w-1/5 text-center",
@@ -41,7 +35,7 @@ export function render(tasks) {
         }),
         El({
           element: "td",
-          className :"flex justify-center gap-2 py-3",
+          className: "flex justify-center gap-2 py-3",
           children: [actionBtn(0), actionBtn(1), actionBtn(2)],
         }),
       ],
