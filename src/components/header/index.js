@@ -1,4 +1,5 @@
 import { El, icon } from "../../library";
+import { handelSearch } from "../../library/functions/handelSearch";
 import { showFilter } from "../../library/functions/showFilter";
 import { showModal } from "../../library/functions/showModal";
 
@@ -23,6 +24,7 @@ export function Header() {
             className: "bg-transparent outline-none w-24 md:w-56",
             type: "text",
             placeholder: "Search",
+            onkeyup : handelSearch,
           }),
         ],
       }),
