@@ -1,17 +1,27 @@
 export function closeModal() {
   const modal = document.getElementById("modal");
   const overlay = document.getElementById("overlay");
+  const viewModal = document.getElementById("viewModal");
   const invalidDate = document.getElementById("invalidDate");
   const invalidTask = document.getElementById("invalidTask");
+  const statusColor = document.getElementById("statusColor");
+  const priorityColor = document.getElementById("priorityColor");
   const form = document.querySelector("form");
 
   modal.style.display = "none";
   overlay.style.display = "none";
-  invalidDate.style.display = "none";
-  invalidTask.style.display = "none";
+  viewModal.style.display = "none";
+  if (invalidDate || invalidTask || statusColor || priorityColor) {
+    invalidDate.style.display = "none";
+    invalidTask.style.display = "none";
+    statusColor.innerHTML = "";
+    priorityColor.innerHTML = "";
+  }
 
   // Reset inputs
-  form.taskName.value = "";
-  form.description.value = "";
-  form.date.value = "";
+  if (form.innerHTML) {
+    form.taskName.value = "";
+    form.description.value = "";
+    form.date.value = "";
+  }
 }
