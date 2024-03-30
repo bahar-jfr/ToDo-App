@@ -32,7 +32,7 @@ export function Header() {
       icon("fa-solid fa-square-plus fa-xl cursor-pointer"),
     ],
   });
-  header.children[4].addEventListener("click", () => showModal());
+  header.children[4].addEventListener("click", () => showModal("Add New Task", "Submit"));
   header.children[3].addEventListener("click",()=> showFilter())
 
   return header;

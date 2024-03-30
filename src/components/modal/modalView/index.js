@@ -12,9 +12,10 @@ export function Modal() {
     children: [
       El({
         element: "h2",
+        id: "modalTitle",
         className:
           "bg-dark_purple text-white font-semibold text-xl p-4 mb-8 rounded-t-md",
-        innerHTML: "Add New Task",
+        innerHTML: "",
       }),
       ModalContent(),
     ],
