@@ -29,3 +29,10 @@ export function statusBtn(item) {
     ],
   });
 }
+
+export function emptyStatusBtn(item) {
+  return El({
+              element: "p",
+               className: ` md:py-2 md:px-2 px-1 w-fit rounded-3xl ${statusData[item]} `,
+             })
+}
