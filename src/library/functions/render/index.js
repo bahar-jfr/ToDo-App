@@ -35,6 +35,7 @@ export function render(tasks) {
         }),
         El({
           element: "td",
+          id : "action",
           className: "flex justify-center gap-2 py-3",
           children: [actionBtn(0), actionBtn(1), actionBtn(2)],
         }),
