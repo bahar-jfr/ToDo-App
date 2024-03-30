@@ -1,10 +1,17 @@
 import { closeModal } from "../closeModal";
 import { setData } from "../../../api/setData";
+import { getData } from "../../../api/getData";
+import { render } from "../render";
+import { editData } from "../../../api/editData";
+import { itemId } from "../handelCrud";
 
-const isEdit = false;
+export const isEdit = {
+  mode: false,
+};
 
-export function handelSubmit() {
-  closeModal();
+export const page = { currentPage: 1, perPge: 5 };
+
+export async function handelSubmit() {
   const form = document.querySelector("form");
   const taskName = form.taskName.value;
   const priority = form.priority.value;
@@ -12,7 +19,7 @@ export function handelSubmit() {
   const date = form.date.value;
   const desc = form.description.value;
 
-  if (!isEdit) {
+  if (!isEdit.mode) {
     const task = {
       taskName,
       priority,
@@ -22,5 +29,21 @@ export function handelSubmit() {
       id: Date.now(),
     };
     setData(task);
+  } else {
+    const updatedTask = {
+      taskName,
+      priority,
+      status,
+      date,
+      desc,
+    };
+    await editData(itemId, updatedTask);
+    isEdit.mode = false;
   }
+
+  await getData(page.currentPage, page.perPge).then((res) => {
+    render(res.data.data);
+  });
+
+  closeModal();
 }
