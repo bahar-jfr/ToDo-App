@@ -1,14 +1,18 @@
 import { getData } from "../../../api/getData";
+import { selectPage } from "../handelPage";
 import { page } from "../handelSubmit";
 import { render } from "../render";
 
-const totalPage = await getData();
+export async function pagination(e) {
+  const pageNum = document.getElementById("pageNum");
+  const totalPage = await getData(page.currentPage,page.perPge);
 
-export function pagination(e) {
   if (e.target.id === "next") {
-    if (page.currentPage >= totalPage.totalPage) return;
+    if (page.currentPage >= totalPage.totalPage || selectPage === "All") return;
 
     ++page.currentPage;
+    pageNum.innerHTML = page.currentPage;
+
     getData(page.currentPage, page.perPge).then((res) => {
       render(res.data.data);
     });
@@ -18,6 +22,8 @@ export function pagination(e) {
     if (page.currentPage === 1) return;
 
     --page.currentPage;
+    pageNum.innerHTML = page.currentPage;
+
     getData(page.currentPage, page.perPge).then((res) => {
       render(res.data.data);
     });

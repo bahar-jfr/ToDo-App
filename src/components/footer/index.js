@@ -1,5 +1,6 @@
 import { El } from "../../library";
 import { handelPage } from "../../library/functions/handelPage";
+import { page } from "../../library/functions/handelSubmit";
 import { pagination } from "../../library/functions/pagination";
 
 export function Footer() {
@@ -54,7 +55,7 @@ export function Footer() {
         children: [
           El({
             element: "div",
-            className: "inline-flex mt-2 xs:mt-0",
+            className: "flex items-center mt-2 xs:mt-0",
             children: [
               El({
                 element: "button",
@@ -62,6 +63,11 @@ export function Footer() {
                 className:
                   "inline-flex items-center px-4 py-2 text-sm font-medium ",
                 innerHTML: "<<",
+              }),
+              El({
+                element: "span",
+                id: "pageNum",
+                innerHTML: page.currentPage,
               }),
               El({
                 element: "button",

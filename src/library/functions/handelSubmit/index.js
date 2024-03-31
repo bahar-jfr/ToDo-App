@@ -9,7 +9,7 @@ export const isEdit = {
   mode: false,
 };
 
-export const page = { currentPage: 1, perPge: 5 };
+export const page = { currentPage: 1, perPge: 999 };
 
 export async function handelSubmit() {
   const form = document.querySelector("form");
