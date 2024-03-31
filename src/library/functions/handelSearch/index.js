@@ -1,5 +1,6 @@
 import { getData } from "../../../api/getData";
 import { debounce } from "../../helpers/debounce";
+import { page } from "../handelSubmit";
 import { render } from "../render";
 
 export function handelSearch(e) {
@@ -7,8 +8,8 @@ export function handelSearch(e) {
 
   debounce(
     () =>
-      getData(1, 5, searchItem).then((res) => {
-        render(res.data);
+      getData(page.currentPage, page.perPge, searchItem).then((res) => {
+        render(res.data.data);
       }),
     2000
   );
