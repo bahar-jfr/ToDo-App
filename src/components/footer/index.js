@@ -24,13 +24,8 @@ export function Footer() {
             children: [
               El({
                 element: "option",
-                hidden: true,
-                selected: true,
-                children: "select",
-              }),
-              El({
-                element: "option",
                 children: "All",
+                selected : true
               }),
               El({
                 element: "option",

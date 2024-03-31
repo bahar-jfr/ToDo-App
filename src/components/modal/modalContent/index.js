@@ -1,6 +1,4 @@
 import { El, btnMaker } from "../../../library";
-import { closeModal } from "../../../library/functions/closeModal";
-import { handelSubmit } from "../../../library/functions/handelSubmit";
 import { validate } from "../../../library/functions/validate";
 
 export function ModalContent() {
