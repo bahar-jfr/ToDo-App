@@ -58,20 +58,25 @@ export function viewModal() {
             children: [
               El({
                 element: "p",
+                className :"font-semibold text-lg text-dark_purple",
                 id: "taskView",
                 innerHTML: "",
               }),
               El({
                 element: "div",
-                className: "flex gap-2",
+                className: "flex gap-2 items-center",
                 children: [
+                  El({
+                    element: "div",
+                    id: "priorityColor",
+                  }),
                   El({
                     element: "div",
                     id: "statusColor",
                   }),
                   El({
                     element: "div",
-                    id: "priorityColor",
+                    id: "daysLeft",
                   }),
                 ],
               }),
