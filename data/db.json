@@ -1,3 +1,108 @@
 {
-    
+  "task": [
+    {
+      "taskName": "complete HW12",
+      "priority": "High",
+      "status": "Done",
+      "date": "2024-04-02",
+      "desc": "use API, vite , json server ",
+      "id": 1711835567812
+    },
+    {
+      "taskName": "university tasks ",
+      "priority": "High",
+      "status": "Todo",
+      "date": "2024-04-10",
+      "desc": "researches ",
+      "id": 1711876666405
+    },
+    {
+      "taskName": "watching movie",
+      "priority": "Low",
+      "status": "Doing",
+      "date": "2024-04-01",
+      "desc": "jurassic park 2, 3",
+      "id": 1711876773910
+    },
+    {
+      "taskName": "push the repository on github",
+      "priority": "Low",
+      "status": "Doing",
+      "date": "2024-03-31",
+      "desc": "hw12",
+      "id": 1711878456556
+    },
+    {
+      "taskName": "go out with my sister ",
+      "priority": "High",
+      "status": "Todo",
+      "date": "2024-04-28",
+      "desc": "its her birthday",
+      "id": 1711880640067
+    },
+    {
+      "taskName": "running ",
+      "priority": "Medium",
+      "status": "Todo",
+      "date": "2024-04-05",
+      "desc": "outside of home ",
+      "id": 1711880720195
+    },
+    {
+      "taskName": "make a desert ",
+      "priority": "Low",
+      "status": "Todo",
+      "date": "2024-04-05",
+      "desc": "such as tiramisso",
+      "id": 1711880754235
+    },
+    {
+      "taskName": "bake a cake ",
+      "priority": "High",
+      "status": "Done",
+      "date": "2024-03-23",
+      "desc": "my birthday cake ",
+      "id": 1711881128821
+    },
+    {
+      "taskName": "go shopping ",
+      "priority": "Low",
+      "status": "Done",
+      "date": "2024-03-20",
+      "desc": "buy shirt and manto for new year",
+      "id": 1711881207049
+    },
+    {
+      "taskName": "celebrate my mother birthday",
+      "priority": "Medium",
+      "status": "Doing",
+      "date": "2024-04-05",
+      "desc": "suprise her ",
+      "id": 1711881259879
+    },
+    {
+      "taskName": "reading book",
+      "priority": "Medium",
+      "status": "Doing",
+      "date": "2024-04-10",
+      "desc": "without boundry",
+      "id": 1711920455677
+    },
+    {
+      "taskName": "play game with family",
+      "priority": "High",
+      "status": "Doing",
+      "date": "2024-04-01",
+      "desc": "13 bedar",
+      "id": 1711963233621
+    },
+    {
+      "taskName": "go to work ",
+      "priority": "Medium",
+      "status": "Todo",
+      "date": "2024-04-03",
+      "desc": "",
+      "id": 1711963287700
+    }
+  ]
 }
