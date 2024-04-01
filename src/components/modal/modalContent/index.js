@@ -28,7 +28,7 @@ export function ModalContent() {
 
       El({
         element: "div",
-        className: "flex md:justify-around gap-4 md:gap-8 items-center w-full flex-col md:flex-row",
+        className: "flex xl:justify-around gap-4 xl:gap-8 items-center w-full flex-col md:flex-row",
         children: [
           El({
             element: "div",

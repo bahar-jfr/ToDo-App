@@ -8,7 +8,7 @@ export function Modal() {
     element: "div",
     id: "modal",
     className:
-      " transition duration-500  w-80 md:w-2/6 h-6/7 md:h-3/5 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden bg-purple-100",
+      " transition duration-500  w-80 xl:w-2/6 h-6/7 xl:h-3/5 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden bg-purple-100",
     children: [
       El({
         element: "h2",
@@ -40,7 +40,7 @@ export function viewModal() {
     element: "div",
     id: "viewModal",
     className:
-      " transition duration-500  w-80 md:w-2/6 h-2/3 sm:h-3/5 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden bg-purple-100 border-2 border-dark_purple",
+      " transition duration-500  w-80 lg:w-2/6 h-2/3 sm:h-3/5 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden bg-purple-100 border-2 border-dark_purple",
     children: [
       El({
         element: "h2",
@@ -50,7 +50,7 @@ export function viewModal() {
       }),
       El({
         element: "div",
-        className: " mx-4 md:mx-12  flex flex-col gap-4",
+        className: " mx-4 lg:mx-12  flex flex-col gap-4",
         children: [
           El({
             element: "p",
