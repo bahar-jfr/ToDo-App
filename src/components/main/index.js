@@ -1,10 +1,9 @@
 import { El } from "../../library";
-import { Footer } from "../footer";
 
 export function Main() {
   return El({
     element: "table",
-    className: "w-full border border-collapse",
+    className: "w-screen border border-collapse ",
     children: [
       El({
         element: "thead",
@@ -15,28 +14,28 @@ export function Main() {
             children: [
               El({
                 element: "th",
-                className: "px-4 py-3 border-2",
-                children: "Task Name",
+                className: "sm:px-4 sm:py-3 border-2",
+                innerHTML: "Task Name",
               }),
               El({
                 element: "th",
-                className: "px-4 py-3 border-2",
-                children: "Priority",
+                className: "sm:px-4 sm:py-3 border-2",
+                innerHTML: "Priority",
               }),
               El({
                 element: "th",
-                className: "px-4 py-3 border-2",
-                children: "Status",
+                className: "sm:px-4 sm:py-3 border-2",
+                innerHTML: "Status",
               }),
               El({
                 element: "th",
-                className: "px-4 py-3 border-2",
-                children: "Deadline",
+                className: "sm:px-4 sm:py-3 border-2",
+                innerHTML: "Deadline",
               }),
               El({
                 element: "th",
-                className: "px-4 py-3 border-2",
-                children: "Actions",
+                className: "sm:px-4 sm:py-3 border-2",
+                innerHTML: "Actions",
               }),
             ],
           }),

@@ -14,7 +14,7 @@ const actionData = [
   {
     name: "view",
     src: "./src/assets/images/ion--eye.svg",
-    class: "bg-dark_gray w-fit md:px-2  py-1  rounded-md",
+    class: "bg-dark_gray w-fit  md:px-2  py-1  rounded-md",
   },
 ];
 

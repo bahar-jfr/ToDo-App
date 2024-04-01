@@ -8,13 +8,13 @@ export function Modal() {
     element: "div",
     id: "modal",
     className:
-      " transition duration-500  w-80 md:w-2/6 h-80 md:h-3/5 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden bg-purple-100",
+      " transition duration-500  w-80 md:w-2/6 h-6/7 md:h-3/5 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden bg-purple-100",
     children: [
       El({
         element: "h2",
         id: "modalTitle",
         className:
-          "bg-dark_purple text-white font-semibold text-xl p-4 mb-8 rounded-t-md",
+          "bg-dark_purple text-white font-semibold text-xl p-4 md:mb-8 mb-4 rounded-t-md",
         innerHTML: "",
       }),
       ModalContent(),
@@ -40,7 +40,7 @@ export function viewModal() {
     element: "div",
     id: "viewModal",
     className:
-      " transition duration-500  w-80 md:w-2/6 h-80 md:h-3/5 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden bg-purple-100 border-2 border-dark_purple",
+      " transition duration-500  w-80 md:w-2/6 h-2/3 sm:h-3/5 rounded-md shadow-2xl z-10 fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  hidden bg-purple-100 border-2 border-dark_purple",
     children: [
       El({
         element: "h2",
@@ -50,38 +50,15 @@ export function viewModal() {
       }),
       El({
         element: "div",
-        className: "mx-12  flex flex-col gap-4",
+        className: " mx-4 md:mx-12  flex flex-col gap-4",
         children: [
           El({
-            element: "div",
-            className: "flex justify-between items-center px-2 mt-2",
-            children: [
-              El({
-                element: "p",
-                className :"font-semibold text-lg text-dark_purple",
-                id: "taskView",
-                innerHTML: "",
-              }),
-              El({
-                element: "div",
-                className: "flex gap-2 items-center",
-                children: [
-                  El({
-                    element: "div",
-                    id: "priorityColor",
-                  }),
-                  El({
-                    element: "div",
-                    id: "statusColor",
-                  }),
-                  El({
-                    element: "div",
-                    id: "daysLeft",
-                  }),
-                ],
-              }),
-            ],
+            element: "p",
+            className :"font-semibold md:text-lg text-dark_purple",
+            id: "taskView",
+            innerHTML: "",
           }),
+         
           El({
             element: "p",
             id: "descView",
@@ -89,6 +66,24 @@ export function viewModal() {
               " p-4 h-36 border-2 border-dark_purple rounded-md text-lg",
             innerHTML: "",
           }),
+          El({
+            element: "div",
+            className: "flex gap-2 justify-end items-center",
+            children: [
+              El({
+                element: "div",
+                id: "priorityColor",
+              }),
+              El({
+                element: "div",
+                id: "statusColor",
+              }),
+              El({
+                element: "div",
+                id: "daysLeft",
+              }),
+            ]
+           }),  
         ],
       }),
     ],

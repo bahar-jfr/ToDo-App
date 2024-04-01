@@ -21,7 +21,7 @@ export function statusBtn(item) {
                 El({
                     element: "p",
                     className: `font-semibold md:py-1 md:px-2 px-1 w-fit rounded-3xl ${statusData[item]} `,
-                    innerText: item,
+                    innerHTML: item,
                   }),
             ]
         })
@@ -33,6 +33,6 @@ export function statusBtn(item) {
 export function emptyStatusBtn(item) {
   return El({
               element: "p",
-               className: ` md:py-2 md:px-2 px-1 w-fit rounded-3xl ${statusData[item]} `,
+               className: `py-2 px-2 w-fit rounded-3xl ${statusData[item]} `,
              })
 }

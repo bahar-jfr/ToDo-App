@@ -12,12 +12,12 @@ export function render(tasks) {
     const row = El({
       element: "tr",
       id: item.id,
-      className: "border-collapse border-2",
+      className: "text-center border-collapse border-2",
       children: [
         El({
           element: "td",
           className: " py-3 w-1/5 text-center",
-          children: item.taskName,
+          innerHTML: item.taskName,
         }),
         statusBtn(item.priority),
         statusBtn(item.status),
@@ -28,15 +28,16 @@ export function render(tasks) {
           children: [
             El({
               element: "p",
-              className: "border-2 border-blue rounded-2xl w-32 md:ml-20",
-              children: item.date,
+              className: "border-2 border-blue rounded-2xl w-32 md:ml-20 text-center",
+              innerHTML: item.date,
             }),
           ],
         }),
         El({
           element: "td",
-          id : "action",
-          className: "flex justify-center gap-2 py-3",
+          id: "action",
+          className:
+            "relative flex justify-center items-center gap-2 h-24 md:h-14 ",
           children: [actionBtn(0), actionBtn(1), actionBtn(2)],
         }),
       ],

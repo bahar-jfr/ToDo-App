@@ -6,7 +6,7 @@ export function Filter() {
   const filter = El({
     element: "div",
     className:
-      " invisible absolute p-6 flex flex-col gap-12 bg-purple-100 h-screen top-0 -right-96 w-96 transition-all duration-1000",
+      " invisible hidden absolute p-6 flex flex-col gap-12 bg-purple-100 h-screen top-0  sm:-right-96 sm:w-96 transition-all duration-1000",
     id: "filter",
     children: [
       El({
@@ -17,7 +17,7 @@ export function Filter() {
           El({
             element: "h2",
             className: "text-dark_purple font-semibold text-3xl ",
-            innerText: "Filter",
+            innerHTML: "Filter",
           }),
           El({
             element: "span",
@@ -39,7 +39,7 @@ export function Filter() {
           El({
             element: "span",
             className: "absolute -top-4 left-3 z-10 text-lg text-dark_purple",
-            children: " Priority ",
+            innerHTML: " Priority ",
           }),
           El({
             element: "select",
@@ -49,23 +49,23 @@ export function Filter() {
             children: [
               El({
                 element :"option",
-                children : "Select",
+                innerHTML : "Select",
                 value: "Select",
                 selected : true
               }),
               El({
                 element: "option",
-                children: "Low",
+                innerHTML: "Low",
                 value: "Low",
               }),
               El({
                 element: "option",
-                children: "Medium",
+                innerHTML: "Medium",
                 value: "Medium",
               }),
               El({
                 element: "option",
-                children: "High",
+                innerHTML: "High",
                 value: "High",
               }),
             ],
@@ -79,7 +79,7 @@ export function Filter() {
           El({
             element: "span",
             className: "absolute -top-4 left-3 z-10 text-lg text-dark_purple",
-            children: " Status ",
+            innerHTML: " Status ",
           }),
           El({
             element: "select",
@@ -89,23 +89,23 @@ export function Filter() {
             children: [
               El({
                 element:"option",
-                children : "Select",
+                innerHTML : "Select",
                 value: "Select",
                 selected : true,
               }),
               El({
                 element: "option",
-                children: "Todo",
+                innerHTML: "Todo",
                 value: "Todo",
               }),
               El({
                 element: "option",
-                children: "Doing",
+                innerHTML: "Doing",
                 value: "Doing",
               }),
               El({
                 element: "option",
-                children: "Done",
+                innerHTML: "Done",
                 value: "Done",
               }),
             ],
@@ -119,7 +119,7 @@ export function Filter() {
           El({
             element: "span",
             className: "absolute -top-4 left-3 z-10 text-lg text-dark_purple",
-            children: " Date ",
+            innerHTML: " Date ",
           }),
           El({
             element: "div",

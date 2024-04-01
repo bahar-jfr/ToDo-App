@@ -15,7 +15,7 @@ export function Footer() {
           El({
             element: "label",
             className: "ml-3",
-            children: "Rows per page : ",
+            innerHTML: "Rows per page : ",
           }),
           El({
             element: "select",
@@ -24,20 +24,20 @@ export function Footer() {
             children: [
               El({
                 element: "option",
-                children: "All",
+                innerHTML: "All",
                 selected : true
               }),
               El({
                 element: "option",
-                children: "5",
+                innerHTML: "5",
               }),
               El({
                 element: "option",
-                children: "10",
+                innerHTML: "10",
               }),
               El({
                 element: "option",
-                children: "15",
+                innerHTML: "15",
               }),
             ],
           }),

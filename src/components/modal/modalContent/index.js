@@ -4,7 +4,7 @@ import { validate } from "../../../library/functions/validate";
 export function ModalContent() {
   const form = El({
     element: "form",
-    className: "flex flex-col gap-8 items-center px-4",
+    className: "flex flex-col gap-6 items-center px-4",
     children: [
       El({
         element: "div",
@@ -21,14 +21,14 @@ export function ModalContent() {
             element: "div",
             id: "invalidTask",
             className: "hidden  m-0 pl-2 text-red-400",
-            children: "This field is required!",
+            innerHTML: "This field is required!",
           }),
         ],
       }),
 
       El({
         element: "div",
-        className: "flex justify-around gap-4 md:gap-8 items-center w-full ",
+        className: "flex md:justify-around gap-4 md:gap-8 items-center w-full flex-col md:flex-row",
         children: [
           El({
             element: "div",
@@ -38,7 +38,7 @@ export function ModalContent() {
                 element: "span",
                 className:
                   "absolute -top-2.5 left-3 z-10 text-xs text-dark_purple",
-                children: " Priority ",
+                innerHTML: " Priority ",
               }),
               El({
                 element: "select",
@@ -48,17 +48,17 @@ export function ModalContent() {
                 children: [
                   El({
                     element: "option",
-                    children: "Low",
+                    innerHTML: "Low",
                     value: "Low",
                   }),
                   El({
                     element: "option",
-                    children: "Medium",
+                    innerHTML: "Medium",
                     value: "Medium",
                   }),
                   El({
                     element: "option",
-                    children: "High",
+                    innerHTML: "High",
                     value: "High",
                   }),
                 ],
@@ -73,7 +73,7 @@ export function ModalContent() {
                 element: "span",
                 className:
                   "absolute -top-2.5 left-3 z-10 text-xs text-dark_purple",
-                children: " Status ",
+                innerHTML: " Status ",
               }),
               El({
                 element: "select",
@@ -83,17 +83,17 @@ export function ModalContent() {
                 children: [
                   El({
                     element: "option",
-                    children: "Todo",
+                    innerHTML: "Todo",
                     value: "Todo",
                   }),
                   El({
                     element: "option",
-                    children: "Doing",
+                    innerHTML: "Doing",
                     value: "Doing",
                   }),
                   El({
                     element: "option",
-                    children: "Done",
+                    innerHTML: "Done",
                     value: "Done",
                   }),
                 ],
@@ -108,7 +108,7 @@ export function ModalContent() {
                 element: "span",
                 className:
                   "absolute -top-2.5 left-3 z-10 text-xs text-dark_purple",
-                children: " Date ",
+                innerHTML: " Date ",
               }),
               El({
                 element: "div",
@@ -125,7 +125,7 @@ export function ModalContent() {
                     element: "div",
                     id: "invalidDate",
                     className: "hidden  pl-2 text-red-400 text-sm",
-                    children: "required!",
+                    innerHTML: "required!",
                   }),
                 ],
               }),
@@ -135,12 +135,12 @@ export function ModalContent() {
       }),
       El({
         element: "div",
-        className: "relative",
+        className: "relative w-full",
         children: [
           El({
             element: "label",
             className: "absolute -top-2.5 left-3 z-10 text-xs text-dark_purple",
-            children: "Description",
+            innerHTML: "Description",
           }),
           El({
             element: "textarea",
