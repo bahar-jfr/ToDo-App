@@ -1,4 +1,4 @@
-import { El, btnMaker } from "../../../library";
+import { El, btn } from "../../../library";
 import { validate } from "../../../library/functions/validate";
 
 export function ModalContent() {
@@ -152,7 +152,7 @@ export function ModalContent() {
           }),
         ],
       }),
-      btnMaker("Submit", "submit", "submit"),
+      btn("Submit", "submit", "submit"),
     ],
   });
 

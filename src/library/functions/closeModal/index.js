@@ -12,6 +12,7 @@ export function closeModal() {
   modal.style.display = "none";
   overlay.style.display = "none";
   viewModal.style.display = "none";
+
   if (invalidDate || invalidTask || statusColor || priorityColor || daysLeft) {
     invalidDate.style.display = "none";
     invalidTask.style.display = "none";
@@ -21,9 +22,8 @@ export function closeModal() {
   }
 
   // Reset inputs
-  if (form.innerHTML) {
     form.taskName.value = "";
     form.description.value = "";
     form.date.value = "";
-  }
+ 
 }

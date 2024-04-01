@@ -1,6 +1,6 @@
 import { El } from "../El";
 
-export function btnMaker(text, id, type) {
+export function btn(text, id, type) {
   return El({
     element: "button",
     className:
