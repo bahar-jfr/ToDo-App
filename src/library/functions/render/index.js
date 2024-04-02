@@ -1,10 +1,12 @@
 import { El } from "../../helpers";
 import { actionBtn } from "../../helpers/actions";
 import { statusBtn } from "../../helpers/status";
+import { hideLoading } from "../hideLoading";
+import { showLoading } from "../showLoading";
 
-export function render(tasks) {
+export async function render(tasks) {
   const tableBody = document.getElementById("tableBody");
-
+  showLoading();
   // Reset the table bode
   tableBody.innerHTML = "";
 
@@ -28,7 +30,8 @@ export function render(tasks) {
           children: [
             El({
               element: "p",
-              className: "border-2 border-blue rounded-2xl w-32 md:ml-20 text-center",
+              className:
+                "border-2 border-blue rounded-2xl w-32 md:ml-20 text-center",
               innerHTML: item.date,
             }),
           ],
@@ -42,6 +45,9 @@ export function render(tasks) {
         }),
       ],
     });
+    hideLoading();
+ /*    setTimeout(() => { */
     tableBody.append(row);
+/*     }, 1100) */
   });
 }

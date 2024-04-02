@@ -4,6 +4,8 @@ import { getData } from "../../../api/getData";
 import { render } from "../render";
 import { editData } from "../../../api/editData";
 import { itemId } from "../handelCrud";
+import { showLoading } from "../showLoading";
+import { hideLoading } from "../hideLoading";
 
 export const isEdit = {
   mode: false,
@@ -40,10 +42,11 @@ export async function handelSubmit() {
     await editData(itemId, updatedTask);
     isEdit.mode = false;
   }
-
+  showLoading();
   await getData(page.currentPage, page.perPge).then((res) => {
     render(res.data.data);
   });
 
   closeModal();
+  hideLoading()
 }
