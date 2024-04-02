@@ -1,6 +1,6 @@
 {
   "task": [
-    {
+{
       "taskName": "complete HW12",
       "priority": "High",
       "status": "Done",
@@ -74,8 +74,8 @@
     },
     {
       "taskName": "celebrate my mother birthday",
-      "priority": "Medium",
-      "status": "Doing",
+      "priority": "High",
+      "status": "Todo",
       "date": "2024-04-05",
       "desc": "suprise her ",
       "id": 1711881259879
@@ -91,7 +91,7 @@
     {
       "taskName": "play game with family",
       "priority": "High",
-      "status": "Doing",
+      "status": "Done",
       "date": "2024-04-01",
       "desc": "13 bedar",
       "id": 1711963233621
@@ -103,6 +103,22 @@
       "date": "2024-04-03",
       "desc": "",
       "id": 1711963287700
+    },
+    {
+      "taskName": "listen to music ",
+      "priority": "Low",
+      "status": "Doing",
+      "date": "2024-04-02",
+      "desc": "voila song",
+      "id": 1712050634854
+    },
+    {
+      "taskName": "make shole zard ",
+      "priority": "High",
+      "status": "Done",
+      "date": "2024-04-02",
+      "desc": "i love it ",
+      "id": 1712051832122
     }
   ]
 }

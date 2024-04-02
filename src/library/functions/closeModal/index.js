@@ -9,17 +9,21 @@ export function closeModal() {
   const daysLeft = document.getElementById("daysLeft");
   const form = document.querySelector("form");
 
-  modal.style.display = "none";
-  overlay.style.display = "none";
-  viewModal.style.display = "none";
+  setTimeout(() => {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+    viewModal.style.display = "none";
+  
+    if (invalidDate || invalidTask || statusColor || priorityColor || daysLeft) {
+      invalidDate.style.display = "none";
+      invalidTask.style.display = "none";
+      statusColor.innerHTML = "";
+      priorityColor.innerHTML = "";
+      daysLeft.innerHTML = "";
+    }
+  }, 250);
 
-  if (invalidDate || invalidTask || statusColor || priorityColor || daysLeft) {
-    invalidDate.style.display = "none";
-    invalidTask.style.display = "none";
-    statusColor.innerHTML = "";
-    priorityColor.innerHTML = "";
-    daysLeft.innerHTML = "";
-  }
+  
 
   // Reset inputs
     form.taskName.value = "";
