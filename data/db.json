@@ -1,6 +1,6 @@
 {
   "task": [
-{
+    {
       "taskName": "complete HW12",
       "priority": "High",
       "status": "Done",
@@ -9,7 +9,7 @@
       "id": 1711835567812
     },
     {
-      "taskName": "university tasks ",
+      "taskName": "Complete the university task",
       "priority": "High",
       "status": "Todo",
       "date": "2024-04-10",
@@ -41,7 +41,7 @@
       "id": 1711880640067
     },
     {
-      "taskName": "running ",
+      "taskName": "go running ",
       "priority": "Medium",
       "status": "Todo",
       "date": "2024-04-05",
@@ -49,11 +49,11 @@
       "id": 1711880720195
     },
     {
-      "taskName": "make a desert ",
+      "taskName": "make a dessert",
       "priority": "Low",
       "status": "Todo",
       "date": "2024-04-05",
-      "desc": "such as tiramisso",
+      "desc": "Tiramisu",
       "id": 1711880754235
     },
     {
