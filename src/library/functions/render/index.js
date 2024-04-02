@@ -26,12 +26,12 @@ export async function render(tasks) {
 
         El({
           element: "td",
-          className: " border-x-2  py-3 w-1/5 text-center",
+          className: " border-x-2  py-3 m-0  w-1/5 text-center",
           children: [
             El({
               element: "p",
               className:
-                "border-2 border-blue rounded-2xl w-32 md:ml-20 text-center",
+                "border-2 border-blue rounded-2xl w-32 mx-3 sm:mx-5 lg:mx-10 xl:mx-20 text-center",
               innerHTML: item.date,
             }),
           ],
@@ -46,8 +46,8 @@ export async function render(tasks) {
       ],
     });
     hideLoading();
- /*    setTimeout(() => { */
+    /*    setTimeout(() => { */
     tableBody.append(row);
-/*     }, 1100) */
+    /*     }, 1100) */
   });
 }
