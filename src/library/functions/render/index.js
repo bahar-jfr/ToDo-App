@@ -6,7 +6,8 @@ import { showLoading } from "../showLoading";
 
 export async function render(tasks) {
   const tableBody = document.getElementById("tableBody");
-  showLoading();
+  if (tasks != "") showLoading();
+
   // Reset the table bode
   tableBody.innerHTML = "";
 
